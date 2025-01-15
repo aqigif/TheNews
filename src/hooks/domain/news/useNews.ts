@@ -3,7 +3,7 @@ import { useDebounce } from 'use-debounce';
 
 import { NewsServices } from './newsService';
 
-const enum NewsQueryKey {
+export const enum NewsQueryKey {
   fetchNewsByKeywords = 'fetchNewsByKeywords',
 }
 
