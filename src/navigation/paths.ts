@@ -1,4 +1,6 @@
 export const enum Paths {
-  Example = 'example',
   Startup = 'startup',
+
+  // News Screeens
+  News = 'News',
 }

@@ -1,1 +1,1 @@
-export { useUser } from './user/useUser';
+export { useNews } from './news/useNews';

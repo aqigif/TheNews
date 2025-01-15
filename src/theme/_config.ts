@@ -7,6 +7,8 @@ export const enum Variant {
 }
 
 const colorsLight = {
+  primary: '#1B1A23',
+  danger: '#C13333',
   gray100: '#DFDFDF',
   gray200: '#A1A1A1',
   gray400: '#4D4D4D',
@@ -20,6 +22,8 @@ const colorsLight = {
 } as const;
 
 const colorsDark = {
+  primary: '#1B1A23',
+  danger: '#C13333',
   gray100: '#000000',
   gray200: '#BABABA',
   gray400: '#969696',
