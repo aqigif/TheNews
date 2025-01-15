@@ -64,7 +64,6 @@ export default [
       'perfectionist/sort-named-exports': 'error',
       'perfectionist/sort-named-imports': 'error',
       'perfectionist/sort-object-types': 'error',
-      'perfectionist/sort-objects': 'error',
       'perfectionist/sort-sets': 'error',
       'perfectionist/sort-switch-case': 'error',
       'perfectionist/sort-union-types': 'error',
