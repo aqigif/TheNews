@@ -19,8 +19,17 @@ function News() {
   const { t } = useTranslation();
 
   const { fonts, layout, colors, gutters, borders } = useTheme();
-  const { data, isLoading, tempKeyword, setTempKeyword, isFetched, onSearch } =
-    useNewsHandler();
+  const {
+    data,
+    isLoading,
+    tempKeyword,
+    setTempKeyword,
+    isFetched,
+    onSearch,
+    isError,
+    error,
+  } = useNewsHandler();
+
   return (
     <SafeScreen>
       <View
@@ -87,8 +96,32 @@ function News() {
         ListEmptyComponent={
           isLoading ? (
             <ActivityIndicator size="large" />
-          ) : isFetched ? (
-            <Text>No Results Found</Text>
+          ) : isError ? (
+            <View
+              style={[
+                layout.flex_1,
+                layout.row,
+                gutters.paddingHorizontal_12,
+                gutters.marginTop_12,
+                gutters.marginBottom_12,
+                gutters.gap_12,
+              ]}
+            >
+              <Text>{error?.message}</Text>
+            </View>
+          ) : isFetched && !data?.length ? (
+            <View
+              style={[
+                layout.flex_1,
+                layout.row,
+                gutters.paddingHorizontal_12,
+                gutters.marginTop_12,
+                gutters.marginBottom_12,
+                gutters.gap_12,
+              ]}
+            >
+              <Text>No Results Found</Text>
+            </View>
           ) : null
         }
         renderItem={({ item }) => (
